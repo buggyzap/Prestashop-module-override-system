@@ -101,6 +101,15 @@ class Opensaas_core extends Module
         return $output;
     }
 
+    public function existOriginal($item)
+    {
+        return file_exists($item.".original");
+    }
+
+    public function createOriginal($item)
+    {
+        file_put_contents($item.".original", file_get_contents($item));
+    }
 
     protected function toggleOverride()
     {
@@ -125,6 +134,7 @@ class Opensaas_core extends Module
                     if(strpos($item, ".override") !== false) continue;
                     if($new_overriden){
                         if(strpos($item, ".original") !== false) continue;
+                        if(!$this->existOriginal($item)) $this->createOriginal($item);
                     }else{
                         if(strpos($item, ".original") === false) continue;
                         $sub_path = str_replace(".original", "", $sub_path);

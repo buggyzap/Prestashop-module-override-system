@@ -29,7 +29,7 @@
 		visibility: inherit !important;
 	}
 </style>
-<div id="module-override-app">
+<div id="module-override-app"> 
 	<div class="relative flex min-h-full flex-col">
 	  <nav class="flex-shrink-0 bg-indigo-600">
 	    <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
