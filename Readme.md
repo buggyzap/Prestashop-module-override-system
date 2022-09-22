@@ -2,13 +2,9 @@
 
 Are you searching for a method that let you override php modules behaviours of Prestashop?
 
----
-
 ## Module Download
 
 ➡️ [Last release download](https://replaceme)
-
----
 
 ## What this module do
 
@@ -19,8 +15,6 @@ Native Prestashop override system, only let you override default .js and .tpl fi
 Thats way I decided to create a module that let you to override .php files too!
 
 Sometimes you want to replace specific module behaviours and you don't want to touch original code, this module let you do exactly that!
-
----
 
 ## How it works
 
@@ -44,8 +38,19 @@ The module automatically detect if is your first override and create *.original*
 
 Note that you will see only overrides of modules you have installed of the specific version you want to override.
 
----
-
 ## Report a bug
 
 Please open an issue if you found a bug.
+
+## Want to contribute?
+
+Run these commands to install dependecies and to make css changes
+
+```
+# install dependencies
+npm install
+# start tailwind daemon css generator
+npx tailwindcss -i ./views/css/input.css -o ./views/css/back.css --watch --minify
+```
+
+This module is built with Tailwind CSS 3.x Framework
